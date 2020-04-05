@@ -223,10 +223,10 @@ var DragSelect = /*#__PURE__*/function () {
     value: function _handleArea(area) {
       if (area === document) return area; // Area has to have a special position attribute for calculations
 
-    /*  var computedStyles = getComputedStyle(area);
+      var computedStyles = getComputedStyle(area);
       area.computedBorder = parseInt(computedStyles.borderWidth);
       var position = computedStyles.position;
-      var isPositioned = position === 'absolute' || position === 'relative' || position === 'fixed';*/
+      var isPositioned = position === 'absolute' || position === 'relative' || position === 'fixed';
 
       if (!isPositioned) {
         area.style.position = 'relative';
