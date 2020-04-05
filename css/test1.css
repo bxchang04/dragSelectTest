@@ -1,0 +1,37 @@
+* { user-select: none; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 0;
+}
+
+.item:focus {
+  border: 1px solid blue;
+}
+
+@for $i from 1 through 6 {
+  .item:nth-child(#{$i}) {
+    background: hsla(random(360), 90%, 50%, 1);
+    top: random(75) * 1%;
+    left: random(95) * 1%;
+  }
+}
+
+.ds-selected {
+  outline: 3px solid black;
+  outline-offset: 3px;
+  color: black;
+  font-weight: bold;
+}
+  
